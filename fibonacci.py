@@ -14,8 +14,7 @@ def fib(n):
         return n
     return fib(n-1) + fib(n-2)
 
-name = "".join(sys.argv[0].split('.')[:-1])+".proc"
-@profile_decorator(name)
+@profile_decorator
 @initialize_intpy(__file__)
 def main(n):
     print(fib(n))
