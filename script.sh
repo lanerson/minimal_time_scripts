@@ -8,20 +8,7 @@ pip install numpy
 echo obtendo framework
 git clone https://github.com/claytonchagas/speedupy/
 
-echo scripts auxiliares
-wget https://raw.githubusercontent.com/lanerson/scripts/main/profiling.py
-wget https://raw.githubusercontent.com/lanerson/scripts/main/analyze_profile.py
-
-echo obtendo experimentos
-wget https://raw.githubusercontent.com/lanerson/scripts/main/fibonacci.py
-wget https://raw.githubusercontent.com/lanerson/scripts/main/copy_matrix.py
-wget https://raw.githubusercontent.com/lanerson/scripts/main/prob_calculator.py
-wget https://raw.githubusercontent.com/lanerson/scripts/main/look_and_say.py
-wget https://raw.githubusercontent.com/lanerson/scripts/main/test_belief_propagation.py
-
-
-# definindo variáveis para execução
-
+# definindo variáveis para execução (específicas para esse teste)
 
 params1=(file murmur 2d-ad)
 params2=(db-file murmur 2d-ad)
@@ -35,9 +22,8 @@ vals3=(100 150 200 250 300 350 400 450 500 550)
 vals4=(30 31 32 33 34 35 36 37 38 39 40)
 vals5=(10 20 30 40 50 60 70 80 90 100)
 
-
-
 exps=(fibonacci copy_matrix prob_calculator look_and_say test_belief_propagation)
+
 for k in {0..4}; do
 	for i in {0..9}; do
 		python3 ${exps[k]}.py  ${vals1[((i))]} --no-cache;
