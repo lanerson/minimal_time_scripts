@@ -5,7 +5,7 @@
 ## Uso
 - Baixar arquivo script.sh diretamente ou pelo terminal
 ``` bash
-$ wget 
+$ wget https://raw.githubusercontent.com/lanerson/minimal_time_scripts/main/script.sh
 ```
 - Mudar Permissões do arquivo (caso ainda não tenha)
 ``` bash
@@ -17,3 +17,5 @@ $ ./script.sh
 ou
 $ sudo ./script.sh
 ```
+
+
