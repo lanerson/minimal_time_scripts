@@ -3,11 +3,11 @@
 ## Script criado para obter tempo ótimo tal que vale a pena executar a função com cache
 
 ## Uso
-- Baixar arquivo script.sh diretamente ou pelo terminal
+- Baixar arquivos diretamente ou pelo terminal
 ``` bash
-$ wget https://raw.githubusercontent.com/lanerson/minimal_time_scripts/main/script.sh
+$ git clone https://github.com/lanerson/minimal_time_scripts
 ```
-- Mudar Permissões do arquivo (caso ainda não tenha)
+- Mudar Permissões do arquivo
 ``` bash
 $ chmod +x script.sh
 ```
@@ -16,6 +16,10 @@ $ chmod +x script.sh
 $ ./script.sh
 ou
 $ sudo ./script.sh
+```
+- Executar script graficos.py
+``` bash
+$ python3 graficos.py
 ```
 
 
