@@ -33,7 +33,7 @@ def analyze_profile(prof_filename, json_filename):
         file_name, line_num, func_name = func
         # Procurar a função existente
         function_data = next((item for item in profile_data[script_name] if item["function"] == func_name), None)
-        if func_name[0] != '<':
+        if func_name[0] != '<' and func_name[0] != '_':
             if function_data:
                 # Adicionar o tempo cumulativo ao array existente
                 function_data["cumulative_time"].append(ct)
@@ -50,6 +50,6 @@ def analyze_profile(prof_filename, json_filename):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python analyze_profile.py <prof_file> <json_file>")
+        print("Usage: python3 analyze_profile.py <prof_file> <json_file>")
     else:
         analyze_profile(sys.argv[1], sys.argv[2])
