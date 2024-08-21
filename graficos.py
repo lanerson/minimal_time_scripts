@@ -112,7 +112,7 @@ def graphs(file_name,computer_nick):
 
         plt.close()
     
-graphs(files[4], COMPUTER_NICK)    
+graphs(files[0], COMPUTER_NICK)    
 exit()
 for x in files:
     graphs(x,COMPUTER_NICK)  
