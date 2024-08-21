@@ -7,7 +7,9 @@
 ``` bash
 $ git clone https://github.com/lanerson/minimal_time_scripts
 ```
-- No arquivo new_script.sh, altere o valor da variavel "exp"
+- No arquivo new_script.sh, altere o valor da variavel ***exp***
+
+- Altere o arquivo ***vals.txt*** para adicionar inputs
 
 - Mudar Permissões do arquivo
 ``` bash
