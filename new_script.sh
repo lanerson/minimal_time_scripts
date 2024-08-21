@@ -19,9 +19,10 @@ exp="fibonacci"
 arquivo="vals.txt"
 
 rm *.prof
-
+rm -rf graphs/ data/ jsons/ .intpy/
 cat "$arquivo" | while IFS= read -r i ; do
-	echo "execução $i"
+	rm -rf .intpy/
+ 	echo "execução $i"
 	python3 ${exp}.py  $i --no-cache;
 	python3 analyze_profile.py ${exp}_profile.prof ${exp}_data.json
 	for j in {1..5}; do
