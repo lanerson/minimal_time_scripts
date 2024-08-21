@@ -98,7 +98,7 @@ def graphs(file_name,computer_nick):
     df.to_csv("data/"+file_name+".csv")
     df = pd.DataFrame(_data2)
     df.to_csv("data/"+file_name+"_cache"+".csv")
-    return
+    
     for i,j,k in zip(data1,data2,functions):
         fig, ax = plt.subplots()
         ax.plot(i[0],i[1], label=k+'--no-cache')
