@@ -19,6 +19,7 @@ print(files)
 
 TAM = 0
 with open("vals.txt") as file: TAM = len(file.readlines())
+
 TAM*=5
 
 def getFunctions(filename):
@@ -70,8 +71,7 @@ def graphs(file_name,computer_nick):
         if i['function'] in functions:
             mean = []
             name = []
-            per = []     
-                   
+            per = []                 
             if len(i['cumulative_time']) == TAM:            
                 for k in range(len(i['cumulative_time'])):
                     per.append(i['cumulative_time'][k])
@@ -81,7 +81,7 @@ def graphs(file_name,computer_nick):
                         per = []
                                 
                 t = [n for n in name]
-                s = [m for m in mean]
+                s = [m for m in mean]                
                 data2.append([t,s])
                 _data2.update({i['function']: s})
             else:                
@@ -93,12 +93,12 @@ def graphs(file_name,computer_nick):
                 data2.append([t,s])
                 _data2.update({i['function']: s})
     
-    w.close()
+    w.close()    
     df = pd.DataFrame(_data1)
     df.to_csv("data/"+file_name+".csv")
     df = pd.DataFrame(_data2)
     df.to_csv("data/"+file_name+"_cache"+".csv")
-
+    return
     for i,j,k in zip(data1,data2,functions):
         fig, ax = plt.subplots()
         ax.plot(i[0],i[1], label=k+'--no-cache')

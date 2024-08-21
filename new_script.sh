@@ -18,14 +18,15 @@ arquivo="vals.txt"
 
 rm *.prof
 
-while IFS= read -r i; do
+cat "$arquivo" | while IFS= read -r i ; do
+	echo "execução $i"
 	python3 ${exp}.py  $i --no-cache;
 	python3 analyze_profile.py ${exp}_profile.prof ${exp}_data.json
 	for j in {1..5}; do
 		python3 ${exp}.py $i  -s ${param[((0))]} -H ${param[((1))]} -m ${param[((2))]};
 		python3 analyze_profile.py ${exp}_profile.prof ${exp}_data_cache.json
 	done
-done < "$arquivo"
+done
 
 mkdir graphs jsons data
 mv *.json jsons/
