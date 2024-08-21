@@ -8,6 +8,7 @@
 $ git clone https://github.com/lanerson/minimal_time_scripts
 ```
 - No arquivo new_script.sh, altere o valor da variavel "exp"
+
 - Mudar Permissões do arquivo
 ``` bash
 $ chmod +x new_script.sh
