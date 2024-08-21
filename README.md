@@ -7,15 +7,16 @@
 ``` bash
 $ git clone https://github.com/lanerson/minimal_time_scripts
 ```
+- no arquivo new_script.sh, altere o valor da variavel <exp>
 - Mudar Permissões do arquivo
 ``` bash
-$ chmod +x script.sh
+$ chmod +x new_script.sh
 ```
 - Executar script
 ``` bash
-$ ./script.sh
+$ ./new_script.sh
 ou
-$ sudo ./script.sh
+$ sudo ./new_script.sh
 ```
 - Executar script graficos.py
 ``` bash
