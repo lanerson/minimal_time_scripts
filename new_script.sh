@@ -5,6 +5,7 @@ pip install mmh3 --break-system-packages
 pip install xxhash --break-system-packages
 pip install numpy --break-system-packages
 pip install scipy --break-system-packages
+pip install pandas --break-system-packages
 
 echo obtendo framework
 git clone https://github.com/claytonchagas/speedupy/
