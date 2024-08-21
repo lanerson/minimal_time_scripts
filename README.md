@@ -5,7 +5,7 @@
 ## Uso
 - Baixar arquivos diretamente ou pelo terminal
 ``` bash
-$ git clone https://github.com/lanerson/minimal_time_scripts
+$ git clone https://github.com/lanerson/minimal_time_scripts.git
 ```
 - No arquivo new_script.sh, altere o valor da variavel ***exp***
 
