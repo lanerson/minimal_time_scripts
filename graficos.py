@@ -20,8 +20,6 @@ print(files)
 TAM = 0
 with open("vals.txt") as file: TAM = len(file.readlines())
 TAM*=5
-print(TAM)
-exit()
 
 def getFunctions(filename):
     with open(filename+'.py') as experiment:
