@@ -21,7 +21,6 @@ TAM = 0
 with open("vals.txt") as file: TAM = len(file.readlines())
 TAM*=5
 print(TAM)
-exit()
 
 def getFunctions(filename):
     with open(filename+'.py') as experiment:
@@ -93,6 +92,7 @@ def graphs(file_name,computer_nick):
                 t = [n for n in name]
                 s = [m for m in mean]
                 data2.append([t,s])
+                _data2.update({i['function']: s})
     
     w.close()
     df = pd.DataFrame(_data1)
@@ -113,7 +113,7 @@ def graphs(file_name,computer_nick):
 
         plt.close()
     
-graphs(files[0], COMPUTER_NICK)    
+graphs(files[4], COMPUTER_NICK)    
 exit()
 for x in files:
     graphs(x,COMPUTER_NICK)  

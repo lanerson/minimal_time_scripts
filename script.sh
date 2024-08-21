@@ -35,5 +35,5 @@ for k in {0..4}; do
 	done
 done
 
-mkdir graphs, jsons
+mkdir graphs jsons
 mv *.json jsons/
