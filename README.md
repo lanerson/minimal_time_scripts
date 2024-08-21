@@ -25,5 +25,8 @@ $ sudo ./new_script.sh
 ``` bash
 $ python3 graficos.py
 ```
-
+- Dica: Use o seguinte comando para gerar uma lista de valores
+``` bash
+$ python3 inserir_dados.py n1 n2
+```
 
