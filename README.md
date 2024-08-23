@@ -1,6 +1,6 @@
 # Minimal Time Script
 
-## Script criado para obter tempo ótimo tal que vale a pena executar a função com cache
+### Script criado para obter tempo ótimo tal que vale a pena executar a função com cache
 
 ## Uso
 - Baixar arquivos diretamente ou pelo terminal
