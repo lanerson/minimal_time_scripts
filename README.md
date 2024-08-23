@@ -5,7 +5,7 @@
 ## Uso
 - Baixar arquivos diretamente ou pelo terminal
 ``` bash
-$ git clone https://github.com/lanerson/minimal_time_scripts.git
+git clone https://github.com/lanerson/minimal_time_scripts.git
 ```
 - No arquivo new_script.sh, altere o valor da variavel ***exp***
 
@@ -13,20 +13,20 @@ $ git clone https://github.com/lanerson/minimal_time_scripts.git
 
 - Mudar Permissões do arquivo
 ``` bash
-$ chmod +x new_script.sh
+chmod +x new_script.sh
 ```
 - Executar script
 ``` bash
-$ ./new_script.sh
+./new_script.sh
 ou
-$ sudo ./new_script.sh
+sudo ./new_script.sh
 ```
 - Executar script graficos.py
 ``` bash
-$ python3 graficos.py
+python3 graficos.py
 ```
 - Dica: Use o seguinte comando para gerar uma lista de valores
 ``` bash
-$ python3 inserir_dados.py n1 n2
+python3 inserir_dados.py 1 100
 ```
 
