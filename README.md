@@ -18,7 +18,9 @@ chmod +x new_script.sh
 - Executar script
 ``` bash
 ./new_script.sh
+```
 ou
+``` bash
 sudo ./new_script.sh
 ```
 - Executar script graficos.py
