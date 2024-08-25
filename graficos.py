@@ -99,10 +99,10 @@ def graphs(file_name,computer_nick):
     df = pd.DataFrame(_data2)
     df.to_csv("data/"+file_name+"_cache"+".csv")
     
-    for i,j,k in zip(data1,data2,functions):
+    for k in functions:
         fig, ax = plt.subplots()
-        ax.plot(i[0],i[1], label=k+'--no-cache')
-        ax.plot(j[0],j[1], label=k+'_cache')
+        ax.plot(list(range(len(_data1[k]))),_data1[k], label=k+'--no-cache')
+        ax.plot(list(range(len(_data2[k]))),_data2[k], label=k+'_cache')
         ax.set(xlabel='number of the test', ylabel='time (s)',
                 title=k)
         # inters = encontrar_interseccoes(i[1],j[1])
