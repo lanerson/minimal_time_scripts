@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 import os 
 import statistics
-from inter import encontrar_interseccoes
 import pandas as pd
 
 COMPUTER_NICK = 'graphs'
@@ -40,9 +39,8 @@ def graphs(file_name,computer_nick):
 
     f = open('./jsons/'+file_name+'_data.json')
     file_profile = json.load(f)
-    # print(file_profile[''+file_name+'_profile'][0])
-    data1 = [] 
-    _data1 = {}
+    # print(file_profile[''+file_name+'_profile'][0])    
+    data1 = {}
     functions = getFunctions(file_name)   
     print("funcoes ", functions)     
     for i in file_profile[''+file_name+'_profile']:
@@ -56,17 +54,15 @@ def graphs(file_name,computer_nick):
                 name.append(len(mean))  
             t = [n for n in name]
             s = [m for m in mean]
-            _data1.update({i['function']: s})
-            data1.append([t,s])
+            data1.update({i['function']: s})            
             # ax.plot(t, s, label=i['function'])
             # ax.set(xlabel='number of the test', ylabel='time (s)',
             #     title=i['function'])
     f.close()
     w = open('./jsons/'+file_name+'_data_cache.json')
     file_profile_ = json.load(w)
-    # print(file_profile[''+file_name+'_profile'][0])
-    data2 = []
-    _data2 = {}
+    # print(file_profile[''+file_name+'_profile'][0])    
+    data2 = {}
     for i in file_profile_[''+file_name+'_profile']:
         if i['function'] in functions:
             mean = []
@@ -81,28 +77,26 @@ def graphs(file_name,computer_nick):
                         per = []
                                 
                 t = [n for n in name]
-                s = [m for m in mean]                
-                data2.append([t,s])
-                _data2.update({i['function']: s})
+                s = [m for m in mean]                                
+                data2.update({i['function']: s})
             else:                
                 for j in i['cumulative_time']:
                     mean.append(j)
                     name.append(len(mean))  
                 t = [n for n in name]
-                s = [m for m in mean]
-                data2.append([t,s])
-                _data2.update({i['function']: s})
+                s = [m for m in mean]                
+                data2.update({i['function']: s})
     
     w.close()    
-    df = pd.DataFrame(_data1)
+    df = pd.DataFrame(data1)
     df.to_csv("data/"+file_name+".csv")
-    df = pd.DataFrame(_data2)
+    df = pd.DataFrame(data2)
     df.to_csv("data/"+file_name+"_cache"+".csv")
     
     for k in functions:
         fig, ax = plt.subplots()
-        ax.plot(list(range(len(_data1[k]))),_data1[k], label=k+'--no-cache')
-        ax.plot(list(range(len(_data2[k]))),_data2[k], label=k+'_cache')
+        ax.plot(list(range(len(data1[k]))),data1[k], label=k+'--no-cache')
+        ax.plot(list(range(len(data2[k]))),data2[k], label=k+'_cache')
         ax.set(xlabel='number of the test', ylabel='time (s)',
                 title=k)
         # inters = encontrar_interseccoes(i[1],j[1])
