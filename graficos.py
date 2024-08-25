@@ -26,9 +26,10 @@ def getFunctions(filename):
         functions = []    
         text = experiment.readlines()
         for line in text:
-            if "def" in line and 'self' not in line:                
+            # print(line[:3])
+            if "def " in line[:4] and 'self' not in line:                
                 functions.append(line.split(' ')[1].split('(')[0])
-        functions.append('execution')
+        functions.append('execution')        
         functions.remove('main')
         return functions
 
