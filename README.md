@@ -32,3 +32,5 @@ python3 graficos.py
 python3 inserir_dados.py 1 100
 ```
 
+Planilha <https://docs.google.com/spreadsheets/d/1mFA4W2FpUhi_gUcvUZfNNyV_VQqcjz8Yv-W_-9PWos0/edit?gid=909281549#gid=909281549>
+
